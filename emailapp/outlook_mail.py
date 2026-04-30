@@ -23,6 +23,8 @@ def get_access_token():
     return token.get("access_token")
 
 
+
+
 def send_outlook_mail(to_email, subject, message):
     access_token = get_access_token()
 
@@ -53,5 +55,8 @@ def send_outlook_mail(to_email, subject, message):
     url = f"https://graph.microsoft.com/v1.0/users/{SENDER_EMAIL}/sendMail"
 
     response = requests.post(url, headers=headers, json=email_msg)
+
+    print("MAIL STATUS:", response.status_code)
+    print("MAIL RESPONSE:", response.text)
 
     return response.status_code
