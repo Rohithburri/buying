@@ -160,5 +160,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://deployment-ivz0.onrender.com"
+    "https://bulk-hkbh.onrender.com/"
 ]
